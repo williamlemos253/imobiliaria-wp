@@ -1,0 +1,31 @@
+<div class="card-content">
+					
+
+						<p><?php $content = the_field('descricao_do_imovel'); echo mb_strimwidth($content, 0, 200, '...');?></p>
+					
+						<p class="center-align">
+
+							<i class="fas fa-bed"></i>
+							<?php $dormitorios = get_field('dormitorios'); ?>
+							<b><?php echo $dormitorios ?>&nbsp;<?php echo ($dormitorios == 1) ? "Dormitório" : "Dormitórios";  ?>&nbsp;</b>
+
+							<i class="fas fa-car"></i><b>
+							<?php $vagas_na_garagem = get_field('vagas_na_garagem'); ?>
+							<b><?php echo $vagas_na_garagem ?>&nbsp;<?php echo ($vagas_na_garagem == 1) ? "Vaga" : "Vagas";  ?>&nbsp;</b>
+
+							<i class="fas fa-ruler-combined"></i>&nbsp;<b><?php the_field('tamanho_do_imovel') ?>m²</b>
+						</p>
+						<p class="center-align">
+						
+							<i class="fas fa-toilet"></i>
+							<?php $banheiros = get_field('banheiros'); ?>
+							<b><?php echo $banheiros ?>&nbsp;<?php echo ($banheiros == 1) ? "Banheiro" : "Banheiros";  ?>&nbsp;</b>
+							
+
+							<i class="fas fa-bath"></i>
+							<?php $suites = get_field('suites'); ?>
+							<b><?php echo $suites ?>&nbsp;<?php echo ($suites == 1) ? "Suíte" : "Suítes";  ?>&nbsp;</b>
+						
+						</p>
+					
+					</div>
